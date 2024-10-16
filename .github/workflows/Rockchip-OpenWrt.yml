@@ -1,9 +1,11 @@
 name: Rockchip OpenWrt
 
-on:
+on: 
+  repository_dispatch:
   workflow_dispatch:
+
   schedule:
-    - cron: 0 18 * * *
+    - cron: '0 5 1 * *' # 5 am every month
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
